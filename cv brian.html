@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abraham Brian Candra — Economics, Informatics, Web Security, and Software/IoT portfolio." />
+  <meta name="author" content="Abraham Brian Candra" />
+
+  <!-- Open Graph / Social Share Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abraham Brian Candra — Portfolio &amp; CV" />
+  <meta property="og:description" content="Grade 12 student working across economics, web security (OWASP), and software &amp; ESP32 IoT prototypes." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Abraham Brian Candra — Portfolio &amp; CV" />
+  <meta name="twitter:description" content="Economics, Informatics, Web Security, and Software/IoT portfolio." />
+
+  <!-- Custom Editorial SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23181816'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23f8f7f4'%3EB%3C/text%3E%3C/svg%3E" />
+
+  <title>Abraham Brian Candra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =====================================================
+       1. CURATED EDITORIAL PALETTES
+       ===================================================== */
+    :root,
+    [data-theme="paper"] {
+      --bg: #f8f7f4;
+      --bg-subtle: #f1efe9;
+      --surface: #ffffff;
+      --border: #e5e2d9;
+      --border-strong: #cfc9bc;
+      --text: #181816;
+      --text-secondary: #52514c;
+      --text-muted: #828078;
+      --accent: #1d4ed8;
+      --accent-soft: rgba(29, 78, 216, 0.08);
+      --selection-bg: #181816;
+      --selection-text: #f8f7f4;
+      --backdrop: rgba(24, 24, 22, 0.35);
+      --shadow-lg: 0 20px 50px rgba(24, 24, 22, 0.14);
+    }
+
+    [data-theme="ink"] {
+      --bg: #131312;
+      --bg-subtle: #1b1b19;
+      --surface: #1e1e1c;
+      --border: #2b2a27;
+      --border-strong: #3f3d38;
+      --text: #eeece6;
+      --text-secondary: #b5b2a8;
+      --text-muted: #7d7a72;
+      --accent: #e0a458;
+      --accent-soft: rgba(224, 164, 88, 0.12);
+      --selection-bg: #eeece6;
+      --selection-text: #131312;
+      --backdrop: rgba(0, 0, 0, 0.6);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    [data-theme="sage"] {
+      --bg: #f3f5f1;
+      --bg-subtle: #e9ede6;
+      --surface: #fbfcf9;
+      --border: #d9e0d5;
+      --border-strong: #bcc8b6;
+      --text: #14211a;
+      --text-secondary: #43574b;
+      --text-muted: #72857a;
+      --accent: #1b6b45;
+      --accent-soft: rgba(27, 107, 69, 0.1);
+      --selection-bg: #14211a;
+      --selection-text: #f3f5f1;
+      --backdrop: rgba(20, 33, 26, 0.35);
+      --shadow-lg: 0 20px 50px rgba(20, 33, 26, 0.12);
+    }
+
+    [data-theme="slate"] {
+      --bg: #10141a;
+      --bg-subtle: #171d26;
+      --surface: #1b222c;
+      --border: #27313f;
+      --border-strong: #39475b;
+      --text: #ebf0f5;
+      --text-secondary: #a4b1c2;
+      --text-muted: #6f7e91;
+      --accent: #6aa6f8;
+      --accent-soft: rgba(106, 166, 248, 0.12);
+      --selection-bg: #ebf0f5;
+      --selection-text: #10141a;
+      --backdrop: rgba(0, 0, 0, 0.62);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.48);
+    }
+
+    /* =====================================================
+       2. BASE & TYPOGRAPHY
+       ===================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      background: var(--selection-bg);
+      color: var(--selection-text);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 15.5px;
+      line-height: 1.65;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    .serif { font-family: 'Newsreader', Georgia, serif; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+    a { color: inherit; text-decoration: none; }
+
+    button {
+      font-family: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* =====================================================
+       3. HEADER & NAVIGATION (WITH SCROLL SPY)
+       ===================================================== */
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background-color 0.35s ease, border-color 0.35s ease;
+    }
+
+    .nav-bar {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .site-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      white-space: nowrap;
+    }
+
+    .live-clock {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      padding-left: 0.65rem;
+      border-left: 1px solid var(--border-strong);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+    }
+
+    .nav-links a {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 2px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1px;
+      background: var(--text);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+    }
+
+    .nav-links a.active::after,
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-pill-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 500;
+      padding: 0.34rem 0.62rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      background: var(--bg-subtle);
+      transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      white-space: nowrap;
+    }
+
+    .nav-pill-btn:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    .theme-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.26rem 0.42rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg-subtle);
+    }
+
+    .theme-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid rgba(128, 128, 128, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .theme-dot:hover { transform: scale(1.18); }
+    .theme-dot.active { box-shadow: 0 0 0 2px var(--bg-subtle), 0 0 0 3.5px var(--text); }
+
+    .theme-dot[data-set="paper"] { background: #f8f7f4; }
+    .theme-dot[data-set="ink"] { background: #1c1b19; }
+    .theme-dot[data-set="sage"] { background: #dce5d8; }
+    .theme-dot[data-set="slate"] { background: #1d2735; }
+
+    /* =====================================================
+       4. HERO SECTION + OPTIONAL PORTRAIT SLOT
+       ===================================================== */
+    .hero {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 128px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 1.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 5.2vw, 3.95rem);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      max-width: 760px;
+      margin-bottom: 1.65rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-intro {
+      font-size: 1.06rem;
+      color: var(--text-secondary);
+      max-width: 615px;
+      margin-bottom: 2.15rem;
+      line-height: 1.72;
+    }
+
+    .hero-intro strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Editorial Portrait Slot (graceful monogram fallback if photo.jpg absent) */
+    .portrait-frame {
+      width: 128px;
+      height: 156px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg-subtle);
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin-top: 2.2rem;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(12%);
+      transition: filter 0.35s ease;
+    }
+
+    .portrait-frame:hover img {
+      filter: grayscale(0%);
+    }
+
+    .portrait-fallback {
+      text-align: center;
+      padding: 0.75rem;
+      user-select: none;
+    }
+
+    .portrait-monogram {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2.15rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .portrait-caption {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.4rem;
+      margin-bottom: 3.25rem;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text);
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--border-strong);
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .text-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .text-link .arrow {
+      display: inline-block;
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .text-link:hover .arrow {
+      transform: translate(2px, -2px);
+    }
+
+    .meta-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .meta-value {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* =====================================================
+       5. TWO-COLUMN EDITORIAL SECTION SYSTEM
+       ===================================================== */
+    section.editorial-section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      scroll-margin-top: 4.5rem;
+    }
+
+    section.editorial-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-rail {
+      position: sticky;
+      top: 5.5rem;
+    }
+
+    .section-rail h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.45rem;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.45rem;
+    }
+
+    .section-rail p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .updated-stamp {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+    }
+
+    /* =====================================================
+       6. "NOW" SECTION
+       ===================================================== */
+    .now-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+
+    .now-item {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 0.5rem;
+      align-items: baseline;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .now-marker {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    .now-item strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* =====================================================
+       7. PROJECT INDEX & GITHUB REPOS SUB-BLOCK
+       ===================================================== */
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-tab {
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.32rem 0.75rem;
+      border-radius: 6px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .filter-tab:hover {
+      color: var(--text);
+      background: var(--bg-subtle);
+    }
+
+    .filter-tab.active {
+      color: var(--text);
+      background: var(--bg-subtle);
+      border-color: var(--border-strong);
+    }
+
+    .project-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .project-list:hover .project-row { opacity: 0.48; }
+    .project-list .project-row:hover { opacity: 1; }
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 38px 1fr auto;
+      gap: 1.25rem;
+      align-items: baseline;
+      padding: 1.35rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: opacity 0.25s ease, background-color 0.25s ease, padding-left 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+      border-radius: 4px;
+    }
+
+    .project-row:hover {
+      background: var(--bg-subtle);
+      padding-left: 1rem;
+    }
+
+    .project-row.hidden { display: none; }
+
+    .project-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .project-main h3 {
+      font-size: 1.03rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    .project-main p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.73rem;
+      color: var(--text-muted);
+    }
+
+    .project-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .project-arrow {
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s;
+    }
+
+    .project-row:hover .project-arrow {
+      transform: translate(3px, -3px);
+      color: var(--accent);
+    }
+
+    .click-hint {
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Live GitHub Repos Block (auto-activates when githubUsername is configured) */
+    .gh-repos-wrap {
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px dashed var(--border-strong);
+      display: none;
+    }
+
+    .gh-repos-wrap.visible { display: block; }
+
+    .gh-repos-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+
+    .gh-repos-header h3 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .gh-repos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+    }
+
+    .gh-repo-card {
+      padding: 0.95rem 1.05rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .gh-repo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .gh-repo-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .gh-repo-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .gh-repo-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.85rem;
+    }
+
+    /* =====================================================
+       8. BACKGROUND, HONORS, TOOLKIT, FOOTER
+       ===================================================== */
+    .entry-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2.15rem;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1.25rem;
+      align-items: baseline;
+    }
+
+    .entry-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .entry-body h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.15rem;
+    }
+
+    .entry-sub {
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.55rem;
+    }
+
+    .entry-body p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    .entry-bullets {
+      margin-top: 0.5rem;
+      padding-left: 1.05rem;
+      font-size: 0.91rem;
+      color: var(--text-secondary);
+    }
+
+    .entry-bullets li { margin-bottom: 0.3rem; }
+
+    .honors-list { border-top: 1px solid var(--border); }
+
+    .honor-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+    }
+
+    .honor-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .honor-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .honor-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .toolkit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 2.5rem;
+    }
+
+    .toolkit-col h3 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toolkit-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    footer {
+      padding: 4rem 0 5.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-note { max-width: 480px; }
+
+    .footer-note h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+      font-size: 1.65rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-note p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .copy-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.55rem 0.95rem;
+      border-radius: 7px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .copy-email-btn:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .footer-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    /* =====================================================
+       9. SLIDE-OVER CASE NOTE DRAWER
+       ===================================================== */
+    .overlay-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: var(--backdrop);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .overlay-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      width: min(490px, 100vw);
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      padding: 2rem 2rem 2.5rem;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-close {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    .drawer-close:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    .drawer h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      margin-bottom: 1.1rem;
+    }
+
+    .drawer-block { margin-bottom: 1.4rem; }
+
+    .drawer-block h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .drawer-block p {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      line-height: 1.68;
+    }
+
+    .drawer-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .drawer-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 5px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    .drawer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.5rem;
+    }
+
+    .drawer-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.84rem;
+      font-weight: 500;
+      padding: 0.48rem 0.88rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .drawer-link-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* =====================================================
+       10. COMMAND PALETTE (CTRL+K / CMD+K)
+       ===================================================== */
+    .cmd-modal {
+      position: fixed;
+      top: 16vh;
+      left: 50%;
+      transform: translate(-50%, -10px) scale(0.98);
+      z-index: 110;
+      width: min(540px, calc(100vw - 2rem));
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .cmd-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, 0) scale(1);
+    }
+
+    .cmd-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.9rem 1.1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cmd-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .cmd-input::placeholder { color: var(--text-muted); }
+
+    .cmd-list {
+      max-height: 320px;
+      overflow-y: auto;
+      padding: 0.45rem;
+    }
+
+    .cmd-item {
+      width: 100%;
+      text-align: left;
+      padding: 0.62rem 0.75rem;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .cmd-item:hover,
+    .cmd-item.selected {
+      background: var(--bg-subtle);
+      color: var(--text);
+    }
+
+    .cmd-item-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .cmd-footer {
+      padding: 0.55rem 1rem;
+      border-top: 1px solid var(--border);
+      background: var(--bg-subtle);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* =====================================================
+       11. MOBILE BOTTOM JUMP BAR
+       ===================================================== */
+    .mobile-dock {
+      display: none;
+      position: fixed;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      padding: 0.35rem 0.5rem;
+      box-shadow: var(--shadow-lg);
+      gap: 0.15rem;
+    }
+
+    .mobile-dock a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 0.38rem 0.7rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .mobile-dock a.active,
+    .mobile-dock a:hover {
+      background: var(--bg-subtle);
+      color: var(--text);
+    }
+
+    /* =====================================================
+       12. SUBTLE ENTRANCE & RESPONSIVE / PRINT
+       ===================================================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 820px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .portrait-frame {
+        margin-top: 0;
+        width: 96px;
+        height: 112px;
+        order: -1;
+      }
+      section.editorial-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 3rem 0;
+      }
+      .section-rail { position: static; }
+      .meta-strip { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .mobile-dock { display: flex; }
+      .gh-repos-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .hero { padding: 3rem 0 2.75rem; }
+      .entry { grid-template-columns: 1fr; gap: 0.25rem; }
+      .project-row { grid-template-columns: 1fr auto; }
+      .project-num { display: none; }
+      .toolkit-grid { grid-template-columns: 1fr; }
+      .live-clock, .hide-xs { display: none; }
+      .footer-meta { text-align: left; }
+    }
+
+    @media print {
+      header, .filter-row, .click-hint, .copy-email-btn, .drawer, .overlay-backdrop, .cmd-modal, .mobile-dock, .gh-repos-wrap {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-size: 13px;
+      }
+      .hero { padding: 1.2rem 0 1.5rem; }
+      section.editorial-section {
+        padding: 1.4rem 0;
+        grid-template-columns: 160px 1fr;
+        gap: 1.5rem;
+      }
+      .fade-in { opacity: 1 !important; transform: none !important; }
+      .project-row, .entry, .honor-item { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Editorial Top Bar -->
+  <header>
+    <div class="nav-bar">
+      <a href="#top" class="site-name">
+        <span>Brian Candra</span>
+        <span class="live-clock" id="jktClock" title="Local time in Jakarta">JKT --:--</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#now" data-i18n="nav_now">Now</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#background" data-i18n="nav_bg">Background</a>
+        <a href="#recognition" data-i18n="nav_rec">Recognition</a>
+        <a href="#toolkit" data-i18n="nav_kit">Toolkit</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="nav-pill-btn" id="cmdOpenBtn" type="button" title="Command Palette (Ctrl+K)">
+          <span>⌘K</span>
+        </button>
+
+        <button class="nav-pill-btn" id="langToggle" type="button" title="Switch Language (EN / ID)">
+          EN
+        </button>
+
+        <div class="theme-group" role="group" aria-label="Color palette">
+          <button class="theme-dot active" data-set="paper" title="Paper" aria-label="Paper theme"></button>
+          <button class="theme-dot" data-set="ink" title="Warm Ink" aria-label="Ink theme"></button>
+          <button class="theme-dot" data-set="sage" title="Sage" aria-label="Sage theme"></button>
+          <button class="theme-dot" data-set="slate" title="Slate" aria-label="Slate theme"></button>
+        </div>
+
+        <button class="nav-pill-btn hide-xs" type="button" onclick="window.print()" data-i18n="btn_pdf">PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow fade-in">Abraham Brian Candra &mdash; Jakarta, Indonesia</div>
+
+          <h1 class="fade-in" data-i18n="hero_title" data-html="true">
+            Student working across <em>economics</em>, web security, and small software &amp; hardware systems.
+          </h1>
+
+          <p class="hero-intro fade-in" data-i18n="hero_intro" data-html="true">
+            I'm a Grade 12 student at <strong>SMA Bunda Hati Kudus</strong>. Outside of class, I spend my time
+            auditing web applications with the OWASP framework, tinkering with Python and ESP32 prototypes,
+            leading our school's Economics Club, and organizing youth community programs.
+          </p>
+
+          <div class="link-row fade-in">
+            <a class="text-link" id="linkGithub" href="#" target="_blank" rel="noopener noreferrer">
+              GitHub <span class="arrow">↗</span>
+            </a>
+            <a class="text-link" id="linkLinkedin" href="#" target="_blank" rel="noopener noreferrer">
+              LinkedIn <span class="arrow">↗</span>
+            </a>
+            <a class="text-link" id="linkEmail" href="#">
+              Email <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Optional Portrait Slot: place a "photo.jpg" in the same folder to display automatically -->
+        <div class="portrait-frame fade-in" id="portraitFrame" title="Abraham Brian Candra">
+          <img id="portraitImg" src="photo.jpg" alt="Abraham Brian Candra" onerror="this.style.display='none'; document.getElementById('portraitFallback').style.display='block';" />
+          <div class="portrait-fallback" id="portraitFallback" style="display:none;">
+            <div class="portrait-monogram">B.C.</div>
+            <div class="portrait-caption">Jakarta</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta-strip fade-in">
+        <div>
+          <div class="meta-label" data-i18n="meta_curr_lbl">Currently</div>
+          <div class="meta-value" data-i18n="meta_curr_val">Grade 12 &middot; IPS Track</div>
+        </div>
+        <div>
+          <div class="meta-label" data-i18n="meta_focus_lbl">Focus Areas</div>
+          <div class="meta-value" data-i18n="meta_focus_val">Economics &amp; Informatics</div>
+        </div>
+        <div>
+          <div class="meta-label" data-i18n="meta_stand_lbl">Standing</div>
+          <div class="meta-value" data-i18n="meta_stand_val">#1 in Economics &amp; Informatics</div>
+        </div>
+        <div>
+          <div class="meta-label" data-i18n="meta_lang_lbl">Languages</div>
+          <div class="meta-value" data-i18n="meta_lang_val">ID, EN, Mandarin (Learning)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOW SECTION -->
+    <section class="editorial-section" id="now">
+      <div class="section-rail fade-in">
+        <h2 data-i18n="now_heading">Now</h2>
+        <p data-i18n="now_sub">What I'm focused on right now.</p>
+        <span class="updated-stamp" data-i18n="now_updated">Updated Nov 2026</span>
+      </div>
+
+      <ul class="now-list fade-in">
+        <li class="now-item">
+          <span class="now-marker">01</span>
+          <span data-i18n="now_1" data-html="true">Finalizing my Grade 12 research paper (KTI) on <strong>web application security auditing</strong> using OWASP Top 10:2021 and CVSS v3.1.</span>
+        </li>
+        <li class="now-item">
+          <span class="now-marker">02</span>
+          <span data-i18n="now_2" data-html="true">Refining the <strong>Smart Garden ESP32</strong> automated watering prototype with sensor calibration and Blynk telemetry.</span>
+        </li>
+        <li class="now-item">
+          <span class="now-marker">03</span>
+          <span data-i18n="now_3" data-html="true">Preparing for <strong>2027 undergraduate admissions</strong> in Information Systems &amp; Economics, while running weekly Economics Club sessions.</span>
+        </li>
+        <li class="now-item">
+          <span class="now-marker">04</span>
+          <span data-i18n="now_4" data-html="true">Practicing Mandarin Chinese and documenting side projects on GitHub.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="editorial-section" id="work">
+      <div class="section-rail fade-in">
+        <h2 data-i18n="work_heading">Selected Work</h2>
+        <p data-i18n="work_sub">Projects, prototypes, and independent research papers from 2026.</p>
+      </div>
+
+      <div class="fade-in">
+        <div class="filter-row" role="tablist" aria-label="Filter work">
+          <button class="filter-tab active" data-filter="all" data-i18n="flt_all">All (6)</button>
+          <button class="filter-tab" data-filter="engineering" data-i18n="flt_eng">Software &amp; IoT</button>
+          <button class="filter-tab" data-filter="security" data-i18n="flt_sec">Security</button>
+          <button class="filter-tab" data-filter="research" data-i18n="flt_res">Economics &amp; Research</button>
+        </div>
+
+        <div class="project-list" id="projectList">
+          <article class="project-row" data-category="security" data-id="lms-audit" tabindex="0">
+            <span class="project-num">01</span>
+            <div class="project-main">
+              <h3 data-i18n="p1_title">Web LMS Security Audit &amp; Mitigation Study</h3>
+              <p data-i18n="p1_desc">Authorized grey-box vulnerability assessment applying OWASP Top 10:2021 and CVSS v3.1 scoring for my Grade 12 research paper.</p>
+              <div class="project-tags"><span>OWASP Top 10</span><span>OWASP ZAP</span><span>Burp Suite</span><span>CVSS v3.1</span></div>
+            </div>
+            <div class="project-right"><span>2026</span><span class="project-arrow">↗</span></div>
+          </article>
+
+          <article class="project-row" data-category="engineering" data-id="smart-garden" tabindex="0">
+            <span class="project-num">02</span>
+            <div class="project-main">
+              <h3 data-i18n="p2_title">Smart Garden with ESP32</h3>
+              <p data-i18n="p2_desc">Automated plant-watering hardware prototype with capacitive soil sensing, temperature telemetry, LCD readout, and Blynk control.</p>
+              <div class="project-tags"><span>C++</span><span>ESP32</span><span>Blynk IoT</span><span>Hardware</span></div>
+            </div>
+            <div class="project-right"><span>2026</span><span class="project-arrow">↗</span></div>
+          </article>
+
+          <article class="project-row" data-category="engineering" data-id="voice-hud" tabindex="0">
+            <span class="project-num">03</span>
+            <div class="project-main">
+              <h3 data-i18n="p3_title">Local Voice AI Assistant &amp; Browser HUD</h3>
+              <p data-i18n="p3_desc">Python voice assistant backend paired with a custom HTML/JS interface running local open-source LLMs via Ollama alongside cloud APIs.</p>
+              <div class="project-tags"><span>Python</span><span>Ollama</span><span>HTML/JS</span><span>Local LLMs</span></div>
+            </div>
+            <div class="project-right"><span>2026</span><span class="project-arrow">↗</span></div>
+          </article>
+
+          <article class="project-row" data-category="engineering" data-id="mobile-desktop" tabindex="0">
+            <span class="project-num">04</span>
+            <div class="project-main">
+              <h3 data-i18n="p4_title">Mobile Prototypes &amp; Standalone Python Games</h3>
+              <p data-i18n="p4_desc">Cross-platform apps built with React Native (Expo) and Flutter, plus 2D Pygame platformers packaged into standalone Windows executables.</p>
+              <div class="project-tags"><span>React Native</span><span>TypeScript</span><span>Flutter</span><span>Pygame</span></div>
+            </div>
+            <div class="project-right"><span>2026</span><span class="project-arrow">↗</span></div>
+          </article>
+
+          <article class="project-row" data-category="research" data-id="aegis-os" tabindex="0">
+            <span class="project-num">05</span>
+            <div class="project-main">
+              <h3 data-i18n="p5_title">AEGIS OS — Feasibility Study &amp; Pitch</h3>
+              <p data-i18n="p5_desc">Technical feasibility analysis, cost structure, and investor-style pitch deck for a privacy-first offline smart-home AI concept.</p>
+              <div class="project-tags"><span>Feasibility Study</span><span>Financial Modeling</span><span>Product Pitch</span></div>
+            </div>
+            <div class="project-right"><span>2026</span><span class="project-arrow">↗</span></div>
+          </article>
+
+          <article class="project-row" data-category="research" data-id="cashless-study" tabindex="0">
+            <span class="project-num">06</span>
+            <div class="project-main">
+              <h3 data-i18n="p6_title">Cashless Platforms &amp; Financial Self-Regulation</h3>
+              <p data-i18n="p6_desc">Co-authored Grade 12 sociology study examining how digital wallets affect daily spending habits among Jakarta high school students.</p>
+              <div class="project-tags"><span>Field Research</span><span>Behavioral Economics</span><span>Sociology</span></div>
+            </div>
+            <div class="project-right"><span>2026</span><span class="project-arrow">↗</span></div>
+          </article>
+        </div>
+
+        <p class="click-hint" data-i18n="click_hint">Click any row to read a brief case note.</p>
+
+        <!-- Auto-populated Live GitHub Repositories (activates automatically once SITE_CONFIG.githubUsername is set) -->
+        <div class="gh-repos-wrap" id="ghReposWrap">
+          <div class="gh-repos-header">
+            <h3 data-i18n="gh_heading">Recent Public GitHub Repositories</h3>
+            <a class="mono" id="ghAllLink" href="#" target="_blank" rel="noopener noreferrer" style="font-size:0.74rem; color:var(--accent);">View all ↗</a>
+          </div>
+          <div class="gh-repos-grid" id="ghReposGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section class="editorial-section" id="background">
+      <div class="section-rail fade-in">
+        <h2 data-i18n="bg_heading">Background</h2>
+        <p data-i18n="bg_sub">Education, student governance, and community leadership.</p>
+      </div>
+
+      <div class="entry-stack fade-in">
+        <div class="entry">
+          <div class="entry-date">2024 — 2027</div>
+          <div class="entry-body">
+            <h3>SMA Bunda Hati Kudus</h3>
+            <div class="entry-sub" data-i18n="edu_sub">High School Diploma &middot; Social Sciences (IPS)</div>
+            <ul class="entry-bullets">
+              <li data-i18n="edu_b1">Ranked #1 in school in both Economics and Informatics.</li>
+              <li data-i18n="edu_b2">Authored Grade 12 scientific paper (KTI) on web application security auditing and mitigation.</li>
+              <li data-i18n="edu_b3">Represented school in national economics, accounting, and academic competitions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-date" data-i18n="date_now">2025 — Now</div>
+          <div class="entry-body">
+            <h3 data-i18n="lead1_title">Leader, Economics Club</h3>
+            <div class="entry-sub">SMA Bunda Hati Kudus</div>
+            <p data-i18n="lead1_desc">
+              Run weekly study sessions covering micro/macroeconomics, national olympiad problem sets,
+              and practical personal finance &amp; capital markets fundamentals.
+            </p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-date" data-i18n="date_now">2025 — Now</div>
+          <div class="entry-body">
+            <h3 data-i18n="lead2_title">Youth Organization Leader</h3>
+            <div class="entry-sub" data-i18n="lead2_sub">Community Youth Network &middot; 100+ Members</div>
+            <p data-i18n="lead2_desc">
+              Coordinate monthly gatherings, annual retreats, and recurring charity drives supporting
+              local orphanages across Jakarta.
+            </p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-date" data-i18n="date_now">2025 — Now</div>
+          <div class="entry-body">
+            <h3 data-i18n="lead3_title">Student Council (OSIS) &amp; LEO Club Meliora Wardaya</h3>
+            <div class="entry-sub" data-i18n="lead3_sub">School Governance &amp; Youth Service</div>
+            <p data-i18n="lead3_desc">
+              Help organize school-wide programs, host public events as Master of Ceremonies (MC),
+              and collaborate on youth community service projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOGNITION -->
+    <section class="editorial-section" id="recognition">
+      <div class="section-rail fade-in">
+        <h2 data-i18n="rec_heading">Recognition</h2>
+        <p data-i18n="rec_sub">Academic olympiads, regional competitions, and creative production.</p>
+      </div>
+
+      <div class="honors-list fade-in">
+        <div class="honor-item">
+          <span class="honor-year">2026</span>
+          <div>
+            <div class="honor-title" data-i18n="h1_title">OSN Economics — Provincial Qualifier (OSN-P)</div>
+            <div class="honor-desc" data-i18n="h1_desc">Placed Top 9 at the city/regency level (OSN-K) in Economics and qualified for the provincial round.</div>
+          </div>
+        </div>
+
+        <div class="honor-item">
+          <span class="honor-year">2026</span>
+          <div>
+            <div class="honor-title" data-i18n="h2_title">FEB Untar Accounting Competition — Semifinalist</div>
+            <div class="honor-desc" data-i18n="h2_desc">Advanced to the high school semifinal round hosted by Faculty of Economics &amp; Business, Universitas Tarumanagara.</div>
+          </div>
+        </div>
+
+        <div class="honor-item">
+          <span class="honor-year">2026</span>
+          <div>
+            <div class="honor-title">Kompetisi Sains Ruangguru (KSR) &amp; UNAC</div>
+            <div class="honor-desc" data-i18n="h3_desc">Competed in regional and national rounds representing SMA Bunda Hati Kudus.</div>
+          </div>
+        </div>
+
+        <div class="honor-item">
+          <span class="honor-year">2026</span>
+          <div>
+            <div class="honor-title">Executive Producer — "The Deed of Echoes"</div>
+            <div class="honor-desc" data-i18n="h4_desc">Led production scheduling and post-production workflow for an original 15-minute English student short film.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="editorial-section" id="toolkit">
+      <div class="section-rail fade-in">
+        <h2 data-i18n="kit_heading">Toolkit</h2>
+        <p data-i18n="kit_sub">Languages, frameworks, and tools I actually use.</p>
+      </div>
+
+      <div class="toolkit-grid fade-in">
+        <div class="toolkit-col">
+          <h3 data-i18n="kit_c1">Software &amp; Hardware</h3>
+          <ul>
+            <li>Python (Pygame, PyQt, Pandas, Matplotlib)</li>
+            <li>TypeScript &amp; React Native (Expo)</li>
+            <li>Dart &amp; Flutter</li>
+            <li>C++ for ESP32 / Arduino IoT</li>
+            <li>HTML5, CSS3 &amp; JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-col">
+          <h3 data-i18n="kit_c2">Security &amp; Workflow</h3>
+          <ul>
+            <li>OWASP Top 10:2021 &amp; CVSS v3.1</li>
+            <li>OWASP ZAP &amp; Burp Suite</li>
+            <li>Git, GitHub &amp; VS Code</li>
+            <li>Ollama (Local LLM workflows)</li>
+            <li>PyInstaller packaging</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-col">
+          <h3 data-i18n="kit_c3">Economics &amp; Research</h3>
+          <ul>
+            <li>Micro &amp; Macroeconomics</li>
+            <li>Break-Even &amp; Cost-Plus Pricing Models</li>
+            <li>Indonesian Capital Markets Basics</li>
+            <li>Qualitative &amp; Quantitative Research</li>
+          </ul>
+        </div>
+
+        <div class="toolkit-col">
+          <h3 data-i18n="kit_c4">Communication &amp; Media</h3>
+          <ul>
+            <li>Indonesian (Native) &amp; English (Proficient)</li>
+            <li>Mandarin Chinese (Studying)</li>
+            <li>Public Speaking &amp; Event MC</li>
+            <li>DaVinci Resolve &amp; BandLab</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="fade-in">
+      <div class="footer-note">
+        <h2 data-i18n="foot_title">Say hello.</h2>
+        <p data-i18n="foot_desc">
+          Always open to talking about economics, web security, side projects, or student collaborations.
+        </p>
+        <button class="copy-email-btn" id="copyEmailBtn" type="button">
+          <span id="copyEmailText">public.contact@example.com</span>
+          <span id="copyStatus" style="color: var(--accent);">Copy</span>
+        </button>
+      </div>
+
+      <div class="footer-meta">
+        <div>&copy; <span id="year"></span> Abraham Brian Candra</div>
+        <div data-i18n="foot_credit">Hand-coded HTML, CSS &amp; JS &middot; Press ⌘K / Ctrl+K for quick menu</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MOBILE BOTTOM JUMP BAR -->
+  <nav class="mobile-dock" aria-label="Mobile quick navigation">
+    <a href="#now" data-i18n="nav_now">Now</a>
+    <a href="#work" data-i18n="nav_work">Work</a>
+    <a href="#background" data-i18n="nav_bg">Background</a>
+    <a href="#recognition" data-i18n="nav_rec">Honors</a>
+    <a href="#toolkit" data-i18n="nav_kit">Toolkit</a>
+  </nav>
+
+  <!-- SHARED BACKDROP -->
+  <div class="overlay-backdrop" id="overlayBackdrop" aria-hidden="true"></div>
+
+  <!-- SLIDE-OVER CASE NOTE DRAWER -->
+  <aside class="drawer" id="projectDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div>
+      <div class="drawer-top">
+        <span class="mono" id="drawerMeta" style="font-size: 0.78rem; color: var(--text-muted);">CASE NOTE</span>
+        <button class="drawer-close" id="drawerClose" type="button">Close (Esc)</button>
+      </div>
+
+      <h2 id="drawerTitle">Project Title</h2>
+
+      <div class="drawer-block">
+        <h4 data-i18n="drw_overview">Overview</h4>
+        <p id="drawerOverview"></p>
+      </div>
+
+      <div class="drawer-block">
+        <h4 data-i18n="drw_did">What I Did</h4>
+        <p id="drawerDetails"></p>
+      </div>
+
+      <div class="drawer-block">
+        <h4 data-i18n="drw_stack">Stack &amp; Methods</h4>
+        <div class="drawer-tags" id="drawerTags"></div>
+      </div>
+
+      <div class="drawer-block" id="drawerLinksBlock">
+        <h4 data-i18n="drw_links">Links &amp; Artifacts</h4>
+        <div class="drawer-links" id="drawerLinks"></div>
+      </div>
+    </div>
+
+    <div style="padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-muted);" data-i18n="drw_note">
+      Public summary &mdash; sensitive or internal project details are intentionally omitted.
+    </div>
+  </aside>
+
+  <!-- COMMAND PALETTE (CTRL+K / CMD+K) -->
+  <div class="cmd-modal" id="cmdModal" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="cmd-input-wrap">
+      <span class="mono" style="color:var(--text-muted); font-size:0.85rem;">&gt;</span>
+      <input type="text" class="cmd-input" id="cmdInput" placeholder="Search projects, jump to section, switch theme..." autocomplete="off" />
+      <span class="mono" style="font-size:0.7rem; color:var(--text-muted);">ESC</span>
+    </div>
+    <div class="cmd-list" id="cmdList"></div>
+    <div class="cmd-footer">
+      <span>↑↓ Navigate &middot; ↵ Select</span>
+      <span>Ctrl+K / ⌘K</span>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================================
+       TODO: EDIT KONFIGURASI PUBLIK KAMU DI SATU TEMPAT INI SAJA
+       ========================================================================= */
+    const SITE_CONFIG = {
+      githubUsername: 'YOUR_GITHUB_USERNAME',      // Ganti dgn username GitHub kamu (otomatis tarik repo publik!)
+      linkedinUrl: 'https://linkedin.com/in/YOUR_LINKEDIN_USERNAME',
+      publicEmail: 'public.contact@example.com',
+      projectLinks: {
+        'lms-audit':      [{ label: 'Research Summary', url: '#' }],
+        'smart-garden':   [{ label: 'GitHub Repo', url: '#' }],
+        'voice-hud':      [{ label: 'GitHub Repo', url: '#' }],
+        'mobile-desktop': [{ label: 'GitHub Repo', url: '#' }],
+        'aegis-os':       [{ label: 'Pitch Overview', url: '#' }],
+        'cashless-study': [{ label: 'Paper Abstract', url: '#' }]
+      }
+    };
+
+    // Apply public links from SITE_CONFIG
+    const ghUrl = `https://github.com/${SITE_CONFIG.githubUsername}`;
+    document.getElementById('linkGithub').href = ghUrl;
+    document.getElementById('linkLinkedin').href = SITE_CONFIG.linkedinUrl;
+    document.getElementById('linkEmail').href = `mailto:${SITE_CONFIG.publicEmail}`;
+    document.getElementById('copyEmailText').textContent = SITE_CONFIG.publicEmail;
+    document.getElementById('ghAllLink').href = ghUrl;
+
+    // 1. Dynamic Year & Live Jakarta Clock (WIB / UTC+7)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function updateClock() {
+      try {
+        const fmt = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', hour12: false
+        });
+        document.getElementById('jktClock').textContent = 'JKT ' + fmt.format(new Date());
+      } catch (e) {
+        document.getElementById('jktClock').textContent = 'JKT';
+      }
+    }
+    updateClock();
+    setInterval(updateClock, 30000);
+
+    // 2. Curated Palette Switcher
+    const root = document.documentElement;
+    const themeDots = document.querySelectorAll('.theme-dot');
+    const validThemes = ['paper', 'ink', 'sage', 'slate'];
+
+    function setTheme(name) {
+      root.setAttribute('data-theme', name);
+      localStorage.setItem('brian-cv-theme', name);
+      themeDots.forEach(dot => dot.classList.toggle('active', dot.dataset.set === name));
+    }
+
+    const savedTheme = localStorage.getItem('brian-cv-theme');
+    if (savedTheme && validThemes.includes(savedTheme)) setTheme(savedTheme);
+    themeDots.forEach(dot => dot.addEventListener('click', () => setTheme(dot.dataset.set)));
+
+    // 3. Bilingual Dictionary (EN / ID)
+    const i18n = {
+      en: {
+        nav_now: 'Now', nav_work: 'Work', nav_bg: 'Background', nav_rec: 'Recognition', nav_kit: 'Toolkit', btn_pdf: 'PDF',
+        hero_title: 'Student working across <em>economics</em>, web security, and small software &amp; hardware systems.',
+        hero_intro: "I'm a Grade 12 student at <strong>SMA Bunda Hati Kudus</strong>. Outside of class, I spend my time auditing web applications with the OWASP framework, tinkering with Python and ESP32 prototypes, leading our school's Economics Club, and organizing youth community programs.",
+        meta_curr_lbl: 'Currently', meta_curr_val: 'Grade 12 · IPS Track',
+        meta_focus_lbl: 'Focus Areas', meta_focus_val: 'Economics & Informatics',
+        meta_stand_lbl: 'Standing', meta_stand_val: '#1 in Economics & Informatics',
+        meta_lang_lbl: 'Languages', meta_lang_val: 'ID, EN, Mandarin (Learning)',
+        now_heading: 'Now', now_sub: "What I'm focused on right now.", now_updated: 'Updated Nov 2026',
+        now_1: 'Finalizing my Grade 12 research paper (KTI) on <strong>web application security auditing</strong> using OWASP Top 10:2021 and CVSS v3.1.',
+        now_2: 'Refining the <strong>Smart Garden ESP32</strong> automated watering prototype with sensor calibration and Blynk telemetry.',
+        now_3: 'Preparing for <strong>2027 undergraduate admissions</strong> in Information Systems &amp; Economics, while running weekly Economics Club sessions.',
+        now_4: 'Practicing Mandarin Chinese and documenting side projects on GitHub.',
+        work_heading: 'Selected Work', work_sub: 'Projects, prototypes, and independent research papers from 2026.',
+        flt_all: 'All (6)', flt_eng: 'Software & IoT', flt_sec: 'Security', flt_res: 'Economics & Research',
+        p1_title: 'Web LMS Security Audit & Mitigation Study',
+        p1_desc: 'Authorized grey-box vulnerability assessment applying OWASP Top 10:2021 and CVSS v3.1 scoring for my Grade 12 research paper.',
+        p2_title: 'Smart Garden with ESP32',
+        p2_desc: 'Automated plant-watering hardware prototype with capacitive soil sensing, temperature telemetry, LCD readout, and Blynk control.',
+        p3_title: 'Local Voice AI Assistant & Browser HUD',
+        p3_desc: 'Python voice assistant backend paired with a custom HTML/JS interface running local open-source LLMs via Ollama alongside cloud APIs.',
+        p4_title: 'Mobile Prototypes & Standalone Python Games',
+        p4_desc: 'Cross-platform apps built with React Native (Expo) and Flutter, plus 2D Pygame platformers packaged into standalone Windows executables.',
+        p5_title: 'AEGIS OS — Feasibility Study & Pitch',
+        p5_desc: 'Technical feasibility analysis, cost structure, and investor-style pitch deck for a privacy-first offline smart-home AI concept.',
+        p6_title: 'Cashless Platforms & Financial Self-Regulation',
+        p6_desc: 'Co-authored Grade 12 sociology study examining how digital wallets affect daily spending habits among Jakarta high school students.',
+        click_hint: 'Click any row to read a brief case note.',
+        gh_heading: 'Recent Public GitHub Repositories',
+        bg_heading: 'Background', bg_sub: 'Education, student governance, and community leadership.',
+        edu_sub: 'High School Diploma · Social Sciences (IPS)',
+        edu_b1: 'Ranked #1 in school in both Economics and Informatics.',
+        edu_b2: 'Authored Grade 12 scientific paper (KTI) on web application security auditing and mitigation.',
+        edu_b3: 'Represented school in national economics, accounting, and academic competitions.',
+        date_now: '2025 — Now',
+        lead1_title: 'Leader, Economics Club',
+        lead1_desc: 'Run weekly study sessions covering micro/macroeconomics, national olympiad problem sets, and practical personal finance & capital markets fundamentals.',
+        lead2_title: 'Youth Organization Leader', lead2_sub: 'Community Youth Network · 100+ Members',
+        lead2_desc: 'Coordinate monthly gatherings, annual retreats, and recurring charity drives supporting local orphanages across Jakarta.',
+        lead3_title: 'Student Council (OSIS) & LEO Club Meliora Wardaya', lead3_sub: 'School Governance & Youth Service',
+        lead3_desc: 'Help organize school-wide programs, host public events as Master of Ceremonies (MC), and collaborate on youth community service projects.',
+        rec_heading: 'Recognition', rec_sub: 'Academic olympiads, regional competitions, and creative production.',
+        h1_title: 'OSN Economics — Provincial Qualifier (OSN-P)',
+        h1_desc: 'Placed Top 9 at the city/regency level (OSN-K) in Economics and qualified for the provincial round.',
+        h2_title: 'FEB Untar Accounting Competition — Semifinalist',
+        h2_desc: 'Advanced to the high school semifinal round hosted by Faculty of Economics & Business, Universitas Tarumanagara.',
+        h3_desc: 'Competed in regional and national rounds representing SMA Bunda Hati Kudus.',
+        h4_desc: 'Led production scheduling and post-production workflow for an original 15-minute English student short film.',
+        kit_heading: 'Toolkit', kit_sub: 'Languages, frameworks, and tools I actually use.',
+        kit_c1: 'Software & Hardware', kit_c2: 'Security & Workflow', kit_c3: 'Economics & Research', kit_c4: 'Communication & Media',
+        foot_title: 'Say hello.',
+        foot_desc: 'Always open to talking about economics, web security, side projects, or student collaborations.',
+        foot_credit: 'Hand-coded HTML, CSS & JS · Press ⌘K / Ctrl+K for quick menu',
+        drw_overview: 'Overview', drw_did: 'What I Did', drw_stack: 'Stack & Methods', drw_links: 'Links & Artifacts',
+        drw_note: 'Public summary — sensitive or internal project details are intentionally omitted.'
+      },
+      id: {
+        nav_now: 'Sekarang', nav_work: 'Karya', nav_bg: 'Latar Belakang', nav_rec: 'Prestasi', nav_kit: 'Keahlian', btn_pdf: 'PDF',
+        hero_title: 'Pelajar yang mendalami <em>ekonomi</em>, keamanan web, serta pengembangan perangkat lunak &amp; IoT.',
+        hero_intro: 'Saya siswa kelas 12 di <strong>SMA Bunda Hati Kudus</strong>. Di luar jam sekolah, saya aktif melakukan riset audit keamanan web berbasis OWASP, membuat prototipe Python dan ESP32, memimpin Economics Club sekolah, serta menggerakkan komunitas pemuda.',
+        meta_curr_lbl: 'Saat Ini', meta_curr_val: 'Kelas 12 · Jurusan IPS',
+        meta_focus_lbl: 'Fokus Utama', meta_focus_val: 'Ekonomi & Informatika',
+        meta_stand_lbl: 'Pencapaian', meta_stand_val: 'Peringkat #1 Ekonomi & Informatika',
+        meta_lang_lbl: 'Bahasa', meta_lang_val: 'ID, EN, Mandarin (Belajar)',
+        now_heading: 'Sekarang', now_sub: 'Hal yang sedang saya kerjakan saat ini.', now_updated: 'Diperbarui Nov 2026',
+        now_1: 'Menyelesaikan Karya Tulis Ilmiah (KTI) kelas 12 tentang <strong>audit keamanan aplikasi web</strong> menggunakan OWASP Top 10:2021 dan CVSS v3.1.',
+        now_2: 'Menyempurnakan prototipe penyiraman otomatis <strong>Smart Garden ESP32</strong> beserta kalibrasi sensor dan telemetri Blynk.',
+        now_3: 'Mempersiapkan <strong>pendaftaran kuliah 2027</strong> untuk bidang Sistem Informasi &amp; Ekonomi sambil membina sesi mingguan Economics Club.',
+        now_4: 'Berlatih bahasa Mandarin dan mendokumentasikan proyek pribadi di GitHub.',
+        work_heading: 'Karya Pilihan', work_sub: 'Proyek, prototipe, dan riset independen sepanjang 2026.',
+        flt_all: 'Semua (6)', flt_eng: 'Software & IoT', flt_sec: 'Keamanan Web', flt_res: 'Ekonomi & Riset',
+        p1_title: 'Studi Audit & Mitigasi Keamanan Web LMS',
+        p1_desc: 'Pengujian kerentanan grey-box berizin menggunakan framework OWASP Top 10:2021 dan penilaian risiko CVSS v3.1 untuk KTI kelas 12.',
+        p2_title: 'Smart Garden berbasis ESP32',
+        p2_desc: 'Prototipe penyiraman tanaman otomatis dengan sensor kelembapan tanah, pemantau suhu, layar LCD I2C, dan kontrol via Blynk.',
+        p3_title: 'Asisten Suara AI Lokal & Browser HUD',
+        p3_desc: 'Backend asisten suara Python dengan antarmuka HUD kustom yang menjalankan model LLM lokal via Ollama bersama API cloud.',
+        p4_title: 'Prototipe Aplikasi Mobile & Game Python',
+        p4_desc: 'Aplikasi lintas platform dengan React Native (Expo) dan Flutter, serta game platformer 2D Pygame yang dikemas menjadi file .exe Windows.',
+        p5_title: 'AEGIS OS — Studi Kelayakan & Pitch Deck',
+        p5_desc: 'Analisis kelayakan teknis, struktur biaya, dan presentasi investor untuk konsep sistem AI smart-home offline yang berfokus pada privasi.',
+        p6_title: 'Platform Cashless & Regulasi Diri Finansial',
+        p6_desc: 'Laporan riset sosiologi kelas 12 mengenai pengaruh dompet digital terhadap kebiasaan belanja pelajar SMA di Jakarta.',
+        click_hint: 'Klik baris mana saja untuk membaca catatan singkat proyek.',
+        gh_heading: 'Repositori Publik GitHub Terbaru',
+        bg_heading: 'Latar Belakang', bg_sub: 'Pendidikan, organisasi sekolah, dan kepemimpinan komunitas.',
+        edu_sub: 'SMA · Peminatan Ilmu Pengetahuan Sosial (IPS)',
+        edu_b1: 'Meraih peringkat #1 di sekolah pada mata pelajaran Ekonomi dan Informatika.',
+        edu_b2: 'Menulis Karya Tulis Ilmiah (KTI) kelas 12 tentang audit dan mitigasi keamanan aplikasi web.',
+        edu_b3: 'Mewakili sekolah dalam berbagai kompetisi ekonomi, akuntansi, dan sains tingkat nasional.',
+        date_now: '2025 — Sekarang',
+        lead1_title: 'Ketua, Economics Club',
+        lead1_desc: 'Memimpin sesi belajar mingguan mikro/makroekonomi, persiapan olimpiade ekonomi nasional, serta diskusi literasi keuangan dan pasar modal.',
+        lead2_title: 'Pemimpin Organisasi Pemuda', lead2_sub: 'Komunitas Pemuda · 100+ Anggota',
+        lead2_desc: 'Mengelola pertemuan bulanan, retret tahunan, dan kegiatan bakti sosial rutin untuk panti asuhan lokal di Jakarta.',
+        lead3_title: 'Anggota OSIS & LEO Club Meliora Wardaya', lead3_sub: 'Organisasi Sekolah & Pelayanan Masyarakat',
+        lead3_desc: 'Berperan dalam kepanitiaan acara sekolah, menjadi pembawa acara (MC) di acara publik, dan berkolaborasi dalam program sosial.',
+        rec_heading: 'Prestasi', rec_sub: 'Olimpiade akademik, kompetisi regional, dan produksi kreatif.',
+        h1_title: 'OSN Ekonomi — Lolos Tingkat Provinsi (OSN-P)',
+        h1_desc: 'Meraih peringkat 9 besar tingkat kota/kabupaten (OSN-K) bidang Ekonomi dan melaju ke tingkat provinsi.',
+        h2_title: 'Kompetisi Akuntansi FEB Untar — Semifinalis',
+        h2_desc: 'Melaju ke babak semifinal tingkat SMA yang diselenggarakan oleh Fakultas Ekonomi & Bisnis Universitas Tarumanagara.',
+        h3_desc: 'Berpartisipasi pada babak regional dan nasional mewakili SMA Bunda Hati Kudus.',
+        h4_desc: 'Mengelola jadwal produksi dan alur pascaproduksi film pendek berbahasa Inggris berdurasi 15 menit.',
+        kit_heading: 'Keahlian', kit_sub: 'Bahasa pemrograman, framework, dan perangkat yang rutin digunakan.',
+        kit_c1: 'Software & Hardware', kit_c2: 'Keamanan & Alur Kerja', kit_c3: 'Ekonomi & Riset', kit_c4: 'Komunikasi & Media',
+        foot_title: 'Mari terhubung.',
+        foot_desc: 'Terbuka untuk berdiskusi seputar ekonomi, keamanan web, proyek sampingan, atau kolaborasi pelajar.',
+        foot_credit: 'Ditulis manual dengan HTML, CSS & JS · Tekan ⌘K / Ctrl+K untuk menu cepat',
+        drw_overview: 'Ringkasan', drw_did: 'Yang Dikerjakan', drw_stack: 'Teknologi & Metode', drw_links: 'Tautan & Dokumen',
+        drw_note: 'Ringkasan publik — detail internal atau informasi sensitif sengaja tidak dicantumkan.'
+      }
+    };
+
+    const projectData = {
+      'lms-audit': {
+        meta: '01 / SECURITY RESEARCH / 2026',
+        en: {
+          title: 'Web LMS Security Audit & Mitigation Study',
+          overview: 'My Grade 12 scientific research paper (KTI) evaluating real-world web security posture on a school Learning Management System under an authorized grey-box testing scope.',
+          details: 'Mapped findings against OWASP Top 10:2021 categories using passive and controlled active checks with OWASP ZAP and Burp Suite. Scored severity using CVSS v3.1 and OWASP Risk Rating to produce prioritized, practical remediation steps.'
+        },
+        id: {
+          title: 'Studi Audit & Mitigasi Keamanan Web LMS',
+          overview: 'Karya Tulis Ilmiah (KTI) kelas 12 yang mengevaluasi postur keamanan web pada Learning Management System sekolah dalam ruang lingkup pengujian grey-box berizin.',
+          details: 'Memetakan temuan berdasarkan kategori OWASP Top 10:2021 melalui analisis pasif dan pengujian terkendali menggunakan OWASP ZAP serta Burp Suite, lalu menyusun prioritas mitigasi berbasis CVSS v3.1 dan OWASP Risk Rating.'
+        },
+        tags: ['OWASP Top 10:2021', 'OWASP ZAP', 'Burp Suite', 'CVSS v3.1', 'Academic Paper']
+      },
+      'smart-garden': {
+        meta: '02 / EMBEDDED IOT / 2026',
+        en: {
+          title: 'Smart Garden with ESP32',
+          overview: 'An automated plant-watering hardware prototype designed to monitor soil conditions in real time and trigger irrigation without manual intervention.',
+          details: 'Wired an ESP32 microcontroller with a capacitive soil moisture sensor, DS18B20 OneWire temperature probe, relay-driven water pump, and 16x2 I2C LCD display. Wrote C++ firmware in Arduino IDE and connected mobile telemetry via Blynk.'
+        },
+        id: {
+          title: 'Smart Garden berbasis ESP32',
+          overview: 'Prototipe perangkat keras penyiraman tanaman otomatis untuk memantau kondisi tanah secara real-time dan menyalakan irigasi otomatis.',
+          details: 'Merakit mikrokontroler ESP32 dengan sensor kelembapan tanah kapasitif, sensor suhu DS18B20 OneWire, pompa air berbasis relay, dan layar LCD 16x2 I2C. Firmware ditulis dalam C++ di Arduino IDE dan terhubung ke aplikasi Blynk.'
+        },
+        tags: ['C++', 'ESP32', 'Arduino IDE', 'Blynk IoT', 'OneWire / I2C']
+      },
+      'voice-hud': {
+        meta: '03 / SOFTWARE & AI / 2026',
+        en: {
+          title: 'Local Voice AI Assistant & Browser HUD',
+          overview: 'A personal desktop assistant experiment built to run local open-source language models with a responsive tactical browser interface.',
+          details: 'Built a Python backend routing voice commands between local Ollama models (Llama, DeepSeek, Qwen) and cloud APIs, paired with a lightweight HTML/JS frontend HUD for daily workflow shortcuts.'
+        },
+        id: {
+          title: 'Asisten Suara AI Lokal & Browser HUD',
+          overview: 'Eksperimen asisten desktop pribadi untuk menjalankan model bahasa open-source secara lokal dengan antarmuka browser HUD yang responsif.',
+          details: 'Membangun backend Python yang menghubungkan perintah suara ke model lokal via Ollama (Llama, DeepSeek, Qwen) serta API cloud, dipadukan dengan tampilan HUD berbasis HTML/JS.'
+        },
+        tags: ['Python', 'Ollama', 'HTML/CSS/JS', 'Local LLMs', 'Voice Automation']
+      },
+      'mobile-desktop': {
+        meta: '04 / APP DEVELOPMENT / 2026',
+        en: {
+          title: 'Mobile Prototypes & Standalone Python Games',
+          overview: 'A collection of small software projects built to practice cross-platform mobile UI, state management, and desktop executable packaging.',
+          details: 'Created mobile prototypes including a habit tracker, geography guessing game, and offline JSON library in React Native (Expo / TypeScript) and Flutter. Also built 2D Pygame platformers packaged into standalone Windows .exe builds via PyInstaller.'
+        },
+        id: {
+          title: 'Prototipe Aplikasi Mobile & Game Python',
+          overview: 'Kumpulan proyek perangkat lunak untuk melatih pengembangan UI lintas platform, manajemen state, dan distribusi aplikasi desktop.',
+          details: 'Membuat prototipe mobile (habit tracker, game tebak geografi, dan perpustakaan JSON offline) dengan React Native (Expo/TypeScript) serta Flutter, ditambah game platformer 2D Pygame yang dikemas menjadi .exe dengan PyInstaller.'
+        },
+        tags: ['React Native', 'TypeScript', 'Flutter', 'Pygame', 'PyInstaller']
+      },
+      'aegis-os': {
+        meta: '05 / PRODUCT & STRATEGY / 2026',
+        en: {
+          title: 'AEGIS OS — Feasibility Study & Pitch',
+          overview: 'A product strategy and business feasibility study for an offline, privacy-focused localized AI and smart-home IoT operating concept.',
+          details: 'Structured market positioning, hardware/software feasibility, unit economics, and an investor-style pitch deck balancing technical constraints with realistic pricing and break-even assumptions.'
+        },
+        id: {
+          title: 'AEGIS OS — Studi Kelayakan & Pitch Deck',
+          overview: 'Studi kelayakan bisnis dan strategi produk untuk konsep sistem operasi AI lokal & smart-home IoT yang sepenuhnya berjalan offline demi privasi.',
+          details: 'Menyusun positioning pasar, kelayakan teknis perangkat keras/lunak, analisis biaya, serta deck presentasi dengan asumsi harga dan titik impas (BEP) yang realistis.'
+        },
+        tags: ['Feasibility Study', 'Unit Economics', 'Pitch Deck', 'IoT Strategy']
+      },
+      'cashless-study': {
+        meta: '06 / SOCIOLOGY & ECONOMICS / 2026',
+        en: {
+          title: 'Cashless Platforms & Financial Self-Regulation',
+          overview: 'A co-authored Grade 12 research report studying how e-wallets and QRIS payments influence impulse spending and budgeting habits among Jakarta high school students.',
+          details: 'Designed the survey instrument, gathered student responses, and analyzed behavioral patterns comparing frictionless digital payments with cash budgeting.'
+        },
+        id: {
+          title: 'Platform Cashless & Regulasi Diri Finansial',
+          overview: 'Laporan riset bersama kelas 12 yang meneliti pengaruh dompet digital dan QRIS terhadap perilaku belanja impulsif dan pengelolaan uang saku pelajar SMA di Jakarta.',
+          details: 'Merancang instrumen kuesioner, mengumpulkan data responden pelajar, serta menganalisis perbedaan pola pengeluaran antara pembayaran digital dan tunai.'
+        },
+        tags: ['Field Research', 'Behavioral Economics', 'Survey Analysis', 'Sociology']
+      }
+    };
+
+    let currentLang = localStorage.getItem('brian-cv-lang') || 'en';
+    const langBtn = document.getElementById('langToggle');
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('brian-cv-lang', lang);
+      document.documentElement.lang = lang;
+      langBtn.textContent = lang.toUpperCase();
+
+      const dict = i18n[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (!dict[key]) return;
+        if (el.dataset.html === 'true') el.innerHTML = dict[key];
+        else el.textContent = dict[key];
+      });
+    }
+
+    applyLanguage(currentLang);
+    langBtn.addEventListener('click', () => applyLanguage(currentLang === 'en' ? 'id' : 'en'));
+
+    // 4. Subtle Scroll Reveal + Desktop/Mobile Scroll Spy
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 45);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => revealObserver.observe(el));
+
+    const sectionIds = ['now', 'work', 'background', 'recognition', 'toolkit'];
+    const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-dock a');
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          allNavLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { rootMargin: '-25% 0px -60% 0px' });
+
+    sectionIds.forEach(id => {
+      const sec = document.getElementById(id);
+      if (sec) spyObserver.observe(sec);
+    });
+
+    // 5. Work Filter Tabs
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectRows = document.querySelectorAll('.project-row');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        projectRows.forEach(row => {
+          row.classList.toggle('hidden', filter !== 'all' && row.dataset.category !== filter);
+        });
+      });
+    });
+
+    // 6. Slide-Over Case Note Drawer & Command Palette (Shared Backdrop)
+    const backdrop = document.getElementById('overlayBackdrop');
+    const drawer = document.getElementById('projectDrawer');
+    const cmdModal = document.getElementById('cmdModal');
+    const cmdInput = document.getElementById('cmdInput');
+    const cmdList = document.getElementById('cmdList');
+
+    function closeAllOverlays() {
+      drawer.classList.remove('open');
+      cmdModal.classList.remove('open');
+      backdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function openDrawer(id) {
+      const item = projectData[id];
+      if (!item) return;
+      closeAllOverlays();
+
+      const localized = item[currentLang] || item.en;
+      document.getElementById('drawerMeta').textContent = item.meta;
+      document.getElementById('drawerTitle').textContent = localized.title;
+      document.getElementById('drawerOverview').textContent = localized.overview;
+      document.getElementById('drawerDetails').textContent = localized.details;
+      document.getElementById('drawerTags').innerHTML = item.tags.map(t => `<span class="drawer-tag">${t}</span>`).join('');
+
+      const links = SITE_CONFIG.projectLinks[id] || [];
+      const linksWrap = document.getElementById('drawerLinks');
+      const linksBlock = document.getElementById('drawerLinksBlock');
+      if (links.length) {
+        linksBlock.style.display = 'block';
+        linksWrap.innerHTML = links.map(l => {
+          const isPlaceholder = l.url === '#';
+          const href = isPlaceholder ? ghUrl : l.url;
+          return `<a class="drawer-link-btn" href="${href}" target="_blank" rel="noopener noreferrer">${l.label} ↗</a>`;
+        }).join('');
+      } else {
+        linksBlock.style.display = 'none';
+      }
+
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    projectRows.forEach(row => {
+      row.addEventListener('click', () => openDrawer(row.dataset.id));
+      row.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDrawer(row.dataset.id); }
+      });
+    });
+
+    document.getElementById('drawerClose').addEventListener('click', closeAllOverlays);
+    backdrop.addEventListener('click', closeAllOverlays);
+
+    // 7. Command Palette (Ctrl+K / Cmd+K)
+    let cmdSelectedIdx = 0;
+    let filteredCmds = [];
+
+    function getCommands() {
+      return [
+        { label: 'Jump to Now', tag: 'Section', run: () => location.hash = '#now' },
+        { label: 'Jump to Selected Work', tag: 'Section', run: () => location.hash = '#work' },
+        { label: 'Jump to Background', tag: 'Section', run: () => location.hash = '#background' },
+        { label: 'Jump to Recognition', tag: 'Section', run: () => location.hash = '#recognition' },
+        { label: 'Jump to Toolkit', tag: 'Section', run: () => location.hash = '#toolkit' },
+        { label: 'Case Note: Web LMS Security Audit', tag: 'Project', run: () => openDrawer('lms-audit') },
+        { label: 'Case Note: Smart Garden ESP32', tag: 'Project', run: () => openDrawer('smart-garden') },
+        { label: 'Case Note: Local Voice AI & HUD', tag: 'Project', run: () => openDrawer('voice-hud') },
+        { label: 'Case Note: Mobile & Python Games', tag: 'Project', run: () => openDrawer('mobile-desktop') },
+        { label: 'Case Note: AEGIS OS Pitch', tag: 'Project', run: () => openDrawer('aegis-os') },
+        { label: 'Case Note: Cashless Financial Study', tag: 'Project', run: () => openDrawer('cashless-study') },
+        { label: 'Theme: Paper (Light)', tag: 'Theme', run: () => setTheme('paper') },
+        { label: 'Theme: Warm Ink (Dark)', tag: 'Theme', run: () => setTheme('ink') },
+        { label: 'Theme: Architectural Sage', tag: 'Theme', run: () => setTheme('sage') },
+        { label: 'Theme: Studio Slate (Dark)', tag: 'Theme', run: () => setTheme('slate') },
+        { label: 'Switch Language (EN / ID)', tag: 'Language', run: () => applyLanguage(currentLang === 'en' ? 'id' : 'en') },
+        { label: 'Copy Public Email', tag: 'Action', run: () => document.getElementById('copyEmailBtn').click() },
+        { label: 'Print / Save as PDF', tag: 'Action', run: () => setTimeout(() => window.print(), 150) }
+      ];
+    }
+
+    function renderCommands(query = '') {
+      const q = query.trim().toLowerCase();
+      filteredCmds = getCommands().filter(c => c.label.toLowerCase().includes(q) || c.tag.toLowerCase().includes(q));
+      cmdSelectedIdx = 0;
+      if (!filteredCmds.length) {
+        cmdList.innerHTML = `<div style="padding:1rem; text-align:center; font-size:0.85rem; color:var(--text-muted);">No matching commands.</div>`;
+        return;
+      }
+      cmdList.innerHTML = filteredCmds.map((c, idx) => `
+        <button class="cmd-item ${idx === 0 ? 'selected' : ''}" data-idx="${idx}" type="button">
+          <span>${c.label}</span>
+          <span class="cmd-item-tag">${c.tag}</span>
+        </button>
+      `).join('');
+
+      cmdList.querySelectorAll('.cmd-item').forEach(btn => {
+        btn.addEventListener('click', () => executeCmd(Number(btn.dataset.idx)));
+      });
+    }
+
+    function executeCmd(idx) {
+      const item = filteredCmds[idx];
+      if (!item) return;
+      closeAllOverlays();
+      item.run();
+    }
+
+    function openCmdPalette() {
+      closeAllOverlays();
+      cmdModal.classList.add('open');
+      backdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      cmdInput.value = '';
+      renderCommands('');
+      setTimeout(() => cmdInput.focus(), 30);
+    }
+
+    document.getElementById('cmdOpenBtn').addEventListener('click', openCmdPalette);
+    cmdInput.addEventListener('input', e => renderCommands(e.target.value));
+
+    document.addEventListener('keydown', e => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (cmdModal.classList.contains('open')) closeAllOverlays();
+        else openCmdPalette();
+        return;
+      }
+      if (e.key === 'Escape') {
+        closeAllOverlays();
+        return;
+      }
+      if (cmdModal.classList.contains('open') && filteredCmds.length) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          cmdSelectedIdx = (cmdSelectedIdx + 1) % filteredCmds.length;
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          cmdSelectedIdx = (cmdSelectedIdx - 1 + filteredCmds.length) % filteredCmds.length;
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          executeCmd(cmdSelectedIdx);
+          return;
+        } else {
+          return;
+        }
+        cmdList.querySelectorAll('.cmd-item').forEach((el, i) => {
+          el.classList.toggle('selected', i === cmdSelectedIdx);
+          if (i === cmdSelectedIdx) el.scrollIntoView({ block: 'nearest' });
+        });
+      }
+    });
+
+    // 8. Copy Email Interaction
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const copyStatus = document.getElementById('copyStatus');
+    copyBtn.addEventListener('click', async () => {
+      const email = SITE_CONFIG.publicEmail;
+      try {
+        await navigator.clipboard.writeText(email);
+        copyStatus.textContent = currentLang === 'id' ? 'Tersalin' : 'Copied';
+        setTimeout(() => copyStatus.textContent = 'Copy', 1800);
+      } catch (err) {
+        window.location.href = 'mailto:' + email;
+      }
+    });
+
+    // 9. Optional Live GitHub Public Repos Loader (activates when githubUsername is updated)
+    async function loadGitHubRepos() {
+      const user = SITE_CONFIG.githubUsername;
+      if (!user || user === 'YOUR_GITHUB_USERNAME') return;
+      try {
+        const res = await fetch(`https://api.github.com/users/${encodeURIComponent(user)}/repos?sort=updated&per_page=4`);
+        if (!res.ok) return;
+        const repos = await res.json();
+        if (!Array.isArray(repos) || !repos.length) return;
+
+        const grid = document.getElementById('ghReposGrid');
+        grid.innerHTML = repos.map(r => `
+          <a class="gh-repo-card" href="${r.html_url}" target="_blank" rel="noopener noreferrer">
+            <div>
+              <div class="gh-repo-name">${r.name} ↗</div>
+              <div class="gh-repo-desc">${r.description || 'Public repository on GitHub.'}</div>
+            </div>
+            <div class="gh-repo-meta">
+              ${r.language ? `<span>${r.language}</span>` : ''}
+              <span>★ ${r.stargazers_count}</span>
+            </div>
+          </a>
+        `).join('');
+        document.getElementById('ghReposWrap').classList.add('visible');
+      } catch (e) {
+        // Silently ignore if offline or rate-limited
+      }
+    }
+    loadGitHubRepos();
+  </script>
+</body>
+</html>
